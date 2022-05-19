@@ -43,13 +43,13 @@
                 $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
             }
             function getMessages() {
-                $.get("http://localhost:3010/messages", (data)=> {
+                $.get("https://goldenchatapp.herokuapp.com/messages", (data)=> {
                     data.forEach(addMessage);
 
                 })
             }
             function postMessage(message) {
-                $.post("http://localhost:3010/messages", message)
+                $.post("https://goldenchatapp.herokuapp.com/messages", message)
                 
             }
 
